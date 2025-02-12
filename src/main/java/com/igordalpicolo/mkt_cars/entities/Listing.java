@@ -15,7 +15,7 @@ public class Listing {
     private String brand;
     private String model;
 
-    @Column(name = "year-manofactured")
+    @Column(name = "YEAR-MANUFACTURED")
     private Integer year;
     private String color;
     private Integer price;
