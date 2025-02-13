@@ -12,9 +12,10 @@ public class UserBuyer extends User {
         super();
     }
 
-    protected UserBuyer(int id, String name, String email, String phone, String password) {
+
+
+    protected UserBuyer(Long id, String name, String email, String phone, String password) {
         super(id, name, email, phone, password);
     }
-
 
 }

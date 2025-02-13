@@ -17,8 +17,16 @@ public class UserSeller extends User {
     public UserSeller() {
     }
 
-    public UserSeller(int id, String name, String email, String phone, String password, String address) {
+    public UserSeller(Long id, String name, String email, String phone, String password, String address) {
         super(id, name, email, phone, password);
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
         this.address = address;
     }
 }

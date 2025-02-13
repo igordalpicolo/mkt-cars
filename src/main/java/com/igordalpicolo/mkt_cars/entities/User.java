@@ -10,14 +10,14 @@ public abstract class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String name;
     private String email;
     private String phone;
     private String password;
 
-    protected User(int id, String name, String email, String phone, String password) {
+    protected User(Long id, String name, String email, String phone, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -29,9 +29,9 @@ public abstract class User {
 
     }
 
-    public int getId() {return id;}
+    public Long getId() {return id;}
 
-    public void setId(int id) {this.id = id;}
+    public void setId(Long id) {this.id = id;}
 
     public String getName() {
         return name;
@@ -64,4 +64,5 @@ public abstract class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

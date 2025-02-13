@@ -10,7 +10,7 @@ public class Listing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String brand;
     private String model;
@@ -20,9 +20,14 @@ public class Listing {
     private String color;
     private Integer price;
     private Integer Kilometers;
+    private String description;
 
-    public Listing() {}
-    public Listing(String brand, String model, Integer year, String color, Integer price, Integer Kilometers) {
+    public Listing() {
+    }
+
+    public Listing(Long id, String description, String brand, String model, Integer year, String color, Integer price, Integer Kilometers) {
+        this.id = id;
+        this.description = description;
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -31,11 +36,19 @@ public class Listing {
         this.Kilometers = Kilometers;
     }
 
-    public Integer getId() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
