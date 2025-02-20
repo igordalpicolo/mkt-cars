@@ -10,10 +10,6 @@ public class UserSeller extends User {
 
     private String address;
 
-    @ManyToOne
-    @JoinColumn(name = "listing_id")
-    private Listing listing;
-
     public UserSeller() {
     }
 

@@ -12,6 +12,8 @@ public class UserSellerDTO {
     private String password;
     private String address;
 
+    public UserSellerDTO() {}
+
     public UserSellerDTO(UserSeller entity) {
         BeanUtils.copyProperties(entity, this);
     }

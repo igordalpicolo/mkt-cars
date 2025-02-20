@@ -22,6 +22,10 @@ public class Listing {
     private Integer Kilometers;
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "seller_id", nullable = false)
+    private UserSeller userSeller;
+
     public Listing() {
     }
 
