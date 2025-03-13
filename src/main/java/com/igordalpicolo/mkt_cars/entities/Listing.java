@@ -19,7 +19,7 @@ public class Listing {
     private Integer year;
     private String color;
     private Integer price;
-    private Integer Kilometers;
+    private Integer kilometers;
     private String description;
 
     @ManyToOne
@@ -37,7 +37,7 @@ public class Listing {
         this.year = year;
         this.color = color;
         this.price = price;
-        this.Kilometers = Kilometers;
+        this.kilometers = Kilometers;
     }
 
     public String getDescription() {
@@ -97,11 +97,19 @@ public class Listing {
     }
 
     public Integer getKilometers() {
-        return Kilometers;
+        return kilometers;
     }
 
     public void setKilometers(Integer kilometers) {
-        Kilometers = kilometers;
+        this.kilometers = kilometers;
+    }
+
+    public UserSeller getUserSeller() {
+        return userSeller;
+    }
+
+    public void setUserSeller(UserSeller userSeller) {
+        this.userSeller = userSeller;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.igordalpicolo.mkt_cars.dto;
 
 import com.igordalpicolo.mkt_cars.entities.Listing;
+import com.igordalpicolo.mkt_cars.entities.UserSeller;
 import org.springframework.beans.BeanUtils;
 
 public class ListingDTO {
@@ -11,8 +12,11 @@ public class ListingDTO {
     private Integer year;
     private String color;
     private Integer price;
-    private Integer Kilometers;
+    private Integer kilometers;
     private String description;
+    private UserSeller seller;
+
+    public ListingDTO() {}
 
     public ListingDTO(Listing entity) {
         BeanUtils.copyProperties(entity, this);
@@ -42,9 +46,7 @@ public class ListingDTO {
         this.model = model;
     }
 
-    public Integer getYear() {
-        return year;
-    }
+    public Integer getYear() {return year;}
 
     public void setYear(Integer year) {
         this.year = year;
@@ -67,11 +69,11 @@ public class ListingDTO {
     }
 
     public Integer getKilometers() {
-        return Kilometers;
+        return kilometers;
     }
 
     public void setKilometers(Integer kilometers) {
-        Kilometers = kilometers;
+        this.kilometers = kilometers;
     }
 
     public String getDescription() {
@@ -81,5 +83,9 @@ public class ListingDTO {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public void setSeller(UserSeller seller) {this.seller = seller;}
+
+    public UserSeller getSeller() { return seller; }
 
 }
